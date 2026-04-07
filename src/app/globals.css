@@ -100,9 +100,9 @@
   --homepage-max-width: calc(1344px + 46px * 2);
 }
 
-@theme {
+/* @theme {
   --text-sm: 13px;
-}
+} */
 
 @layer base {
   * {
