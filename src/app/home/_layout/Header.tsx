@@ -16,7 +16,10 @@ export default async function Header() {
   return (
     <header className="w-full z-99 fixed border-b border-border-primary backdrop-blur-[20px]">
       <AppContainer className="flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2 mr-auto">
+        <Link
+          href="/"
+          className="flex items-center gap-2 mr-auto -ml-2 px-2 py-1 rounded-sm"
+        >
           <Logo />
         </Link>
 

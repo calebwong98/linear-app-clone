@@ -24,6 +24,9 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
 
+  --color-bg-translucent: var(--bg-translucent);
+  --color-link-primary: var(--link-primary);
+  --color-link-hover: var(--link-hover);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
@@ -57,10 +60,9 @@
 :root {
   --background: oklch(13.77% 0.00442 344.915);
   --foreground: oklch(97.837% 0.0011 202.716);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --card: oklch(21.274% 0.00253 248.167);
+  --popover: oklch(16% 0.004 285);
+  --popover-foreground: oklch(97.837% 0.0011 202.716);
   --primary: oklch(100% 0.00011 271.152 / 0.078);
   --secondary: oklch(92.494% 0.00011 271.152);
   --secondary-foreground: oklch(0.205 0 0);
@@ -69,6 +71,10 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
+
+  --bg-translucent: rgba(255, 255, 255, 0.05);
+  --link-primary: #828fff;
+  --link-hover: #1a1d2f;
 
   --text-primary: #f7f8f8;
   --text-secondary: #d0d6e0;
@@ -106,7 +112,7 @@
 
 @layer base {
   * {
-    @apply border-border-primary outline-ring/50;
+    @apply border-border-primary;
   }
   body {
     @apply bg-background text-foreground;
@@ -117,5 +123,13 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  a {
+    @apply ring-0 outline-0 border-0;
+  }
+
+  *:focus-visible {
+    @apply ring-2 ring-offset-2 ring-offset-background ring-link-primary border-0 outline-0;
   }
 }

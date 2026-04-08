@@ -3,7 +3,6 @@ import { cva } from "class-variance-authority";
 import { NavigationMenu as NavigationMenuPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
-import { ChevronDownIcon } from "lucide-react";
 
 function NavigationMenu({
   className,
@@ -59,7 +58,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group/navigation-menu-trigger inline-flex h-8 w-max items-center justify-center rounded-[4px] px-3 py-1 text-[13px] font-medium transition-all outline-none text-text-tertiary hover:bg-primary hover:text-text-primary focus:bg-primary focus:text-text-primary focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-primary/50 data-popup-open:text-text-primary/50 data-popup-open:hover:bg-primary data-popup-open:hover:text-text-primary data-open:bg-primary/50 data-open:text-text-primary/50 data-open:hover:bg-primary data-open:hover:text-text-primary data-open:focus:bg-primary data-open:focus:text-text-primary",
+  "group/navigation-menu-trigger inline-flex h-8 w-max items-center justify-center rounded-[4px] px-3 py-1 text-[13px] font-medium transition-all outline-none text-text-tertiary hover:bg-primary hover:text-text-primary disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-primary/50 data-popup-open:text-text-primary/50 data-popup-open:hover:bg-primary data-popup-open:hover:text-text-primary data-open:bg-primary/50 data-open:text-text-primary/50 data-open:hover:bg-primary data-open:hover:text-text-primary",
 );
 
 function NavigationMenuTrigger({
@@ -90,7 +89,7 @@ function NavigationMenuContent({
     <NavigationMenuPrimitive.Content
       data-slot="navigation-menu-content"
       className={cn(
-        "top-0 left-0 w-full p-1 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-lg group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:shadow group-data-[viewport=false]/navigation-menu:ring-1 group-data-[viewport=false]/navigation-menu:ring-foreground/10 group-data-[viewport=false]/navigation-menu:duration-300 data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out **:data-[slot=navigation-menu-link]:focus:ring-0 **:data-[slot=navigation-menu-link]:focus:outline-none md:absolute md:w-auto group-data-[viewport=false]/navigation-menu:data-open:animate-in group-data-[viewport=false]/navigation-menu:data-open:fade-in-0 group-data-[viewport=false]/navigation-menu:data-open:zoom-in-95 group-data-[viewport=false]/navigation-menu:data-closed:animate-out group-data-[viewport=false]/navigation-menu:data-closed:fade-out-0 group-data-[viewport=false]/navigation-menu:data-closed:zoom-out-95",
+        "border border-primary rounded-lg top-0 left-0 w-full p-1 ease-[cubic-bezier(0.22,1,0.36,1)] group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-lg group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:shadow  group-data-[viewport=false]/navigation-menu:duration-300 data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out  **:data-[slot=navigation-menu-link]:focus:outline-none md:absolute md:w-auto group-data-[viewport=false]/navigation-menu:data-open:animate-in group-data-[viewport=false]/navigation-menu:data-open:fade-in-0 group-data-[viewport=false]/navigation-menu:data-open:zoom-in-95 group-data-[viewport=false]/navigation-menu:data-closed:animate-out group-data-[viewport=false]/navigation-menu:data-closed:fade-out-0 group-data-[viewport=false]/navigation-menu:data-closed:zoom-out-95",
         className,
       )}
       {...props}
@@ -105,13 +104,13 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center",
+        "absolute top-full -left-3/4 isolate z-50 flex justify-center",
       )}
     >
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg bg-popover text-popover-foreground shadow ring-1 ring-foreground/10 duration-100 md:w-(--radix-navigation-menu-viewport-width) data-open:animate-in data-open:zoom-in-90 data-closed:animate-out data-closed:zoom-out-90",
+          "origin-top-center relative mt-3 h-(--radix-navigation-menu-viewport-height) w-full rounded-lg bg-popover text-popover-foreground shadow duration-100 md:w-(--radix-navigation-menu-viewport-width) data-open:animate-in data-open:zoom-in-90 data-closed:animate-out data-closed:zoom-out-90",
           className,
         )}
         {...props}
@@ -128,7 +127,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "h-8 cursor-pointer flex items-center gap-2 rounded-[4px] px-3 py-1 text-[13px] transition-all outline-none text-text-tertiary hover:bg-primary hover:text-text-primary focus:bg-primary focus:text-text-primary focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-primary/50  data-active:hover:bg-primary data-active:focus:bg-primary [&_svg:not([class*='size-'])]:size-4",
+        "h-8 cursor-pointer flex items-center gap-2 rounded-[4px] px-3 py-1 text-[13px] transition-all outline-none text-text-tertiary hover:bg-primary hover:text-text-primary in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-primary/50  data-active:hover:bg-primary [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
