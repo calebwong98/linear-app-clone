@@ -111,7 +111,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="hidden lg:flex gap-5 mt-20 text-[13px]">
+        <div className="hidden lg:flex gap-5 mt-20 text-[13px] pl-8">
           <Link
             className="text-text-quaternary hover:text-text-tertiary"
             rel="noopener"

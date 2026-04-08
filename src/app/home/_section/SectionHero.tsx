@@ -1,24 +1,46 @@
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SectionHero() {
   return (
-    <section className="w-full bg-red-300 flex justify-between items-center">
-      <h1 className="max-w-4xl text-5xl leading-[1.08] font-medium tracking-tight text-text-primary md:text-7xl md:leading-[1.06]">
-        The product development system for teams and agents
-      </h1>
+    <section className="w-full">
+      <div className="h-33 sm:h-23 lg:h-50"></div>
+      <div className="px-2">
+        <h1 className="text-[36px] sm:text-[56px] lg:text-[4rem] leading-[1.17] sm:leading-[1.1] font-medium tracking-tighter text-text-primary">
+          <span>
+            The product <br className="sm:hidden" /> development <br /> system
+            for teams <br className="md:hidden" /> and agents
+          </span>
+        </h1>
+        <div className="lg:flex justify-between items-end">
+          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-text-tertiary">
+            Purpose-built for planning and building
+            <br className="sm:hidden" /> products.
+            <br className="hidden sm:block xl:hidden" /> Designed for the AI
+            era.
+          </p>
+          <Link
+            href={"/"}
+            className="hidden sm:flex text-[15px] items-center gap-2.5 mt-5 transition-all duration-300 hover:brightness-125"
+          >
+            <div className="bg-link-hover p-1.5 rounded-full">
+              <div className="bg-link-primary size-1.5 rounded-full"></div>
+            </div>
+            <h2>Issue tracking is dead</h2>
+            <div className="flex items-center">
+              <p className="text-text-tertiary px-0.5">linear.app/next</p>{" "}
+              <ArrowRight className="text-text-tertiary size-4" />
+            </div>
+          </Link>
+        </div>
+      </div>
 
-      <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-tertiary md:text-xl">
-        Purpose-built for planning and building products. Designed for the AI
-        era.
-      </p>
+      <div className="h-9 sm:h-17.5"></div>
 
-      {/* <Link
-        href="#"
-        className="mb-8 inline-flex items-center gap-1.5 rounded-full border border-border-secondary bg-bg-secondary px-4 py-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
-      >
-        Issue tracking is dead
-        <span className="text-text-tertiary">linear.app/next →</span>
-      </Link> */}
+      <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[40vh]">
+        <Image src="/Glow.png" alt="Glow" fill className="object-cover" />
+      </div>
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function SectionPreFooter() {
   return (
     <section className="flex flex-col gap-10 items-center justify-center my-24 md:my-56">
-      <h3 className="text-center text-4xl font-medium">
+      <h3 className="text-center text-4xl lg:text-[72px] tracking-tight font-medium">
         Built for the future.
         <br />
         Available today.
