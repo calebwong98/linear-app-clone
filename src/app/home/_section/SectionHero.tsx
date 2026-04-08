@@ -38,8 +38,18 @@ export default function SectionHero() {
 
       <div className="h-9 sm:h-17.5"></div>
 
-      <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-[40vh]">
-        <Image src="/Glow.png" alt="Glow" fill className="object-cover" />
+      <div className="relative w-full h-[50vh]">
+        <div className="bg-linear-2 from-[#5c6063] to-75% to-background absolute w-[calc(100vw-15px)] xl:w-[calc(100vw-25px)] max-w-480 h-full bottom-0 left-1/2 -translate-x-1/2 xl:rounded-b-md">
+          <Image
+            src="/Glow.png"
+            loading="lazy"
+            fill
+            alt="Glow"
+            objectFit="cover"
+          />
+        </div>
+
+        <div className="absolute top-0 left-0 bg-background border border-border-tertiary w-[1346px] h-[30vh] rounded-lg"></div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function HeadContainer({
+export default function AppContainer({
   children,
   className,
 }: {
