@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/shared/Logo";
-import AppContainer from "./AppContainer";
+import HeadContainer from "./HeadContainer";
 
 const footerLinks = {
   Product: [
@@ -51,7 +51,7 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="border-t border-border-primary">
-      <AppContainer className="sm:mb-12 lg:mb-0 pb-6 pt-14 sm:py-14 grid gap-y-12 grid-cols-2 sm:grid-cols-4 lg:gap-0 lg:grid-cols-6">
+      <HeadContainer className="sm:mb-12 lg:mb-0 pb-6 pt-14 sm:py-14 grid gap-y-12 grid-cols-2 sm:grid-cols-4 lg:gap-0 lg:grid-cols-6">
         <Link
           href="/"
           className="hidden sm:inline-block row-start-1 row-end-3 w-fit text-text-primary hover:opacity-50"
@@ -111,7 +111,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="hidden lg:flex px-8 gap-5 mt-20 text-[13px]">
+        <div className="hidden lg:flex gap-5 mt-20 text-[13px]">
           <Link
             className="text-text-quaternary hover:text-text-tertiary"
             rel="noopener"
@@ -134,7 +134,7 @@ export default function Footer() {
             DPA
           </Link>
         </div>
-      </AppContainer>
+      </HeadContainer>
     </footer>
   );
 }

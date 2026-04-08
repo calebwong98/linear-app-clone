@@ -10,7 +10,7 @@ export default function HeadContainer({
   return (
     <div
       className={cn(
-        "max-w-(--homepage-max-width) mx-auto px-4 sm:px-7 lg:px-2.5 xl:px-11.5 pt-18",
+        "max-w-(--homepage-max-width) mx-auto px-6 sm:px-9 lg:px-12 xl:px-20 py-5",
         className,
       )}
     >
