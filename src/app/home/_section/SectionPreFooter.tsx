@@ -4,7 +4,7 @@ import AppContainer from "../_layout/AppContainer";
 export default function SectionPreFooter() {
   return (
     <section>
-      <AppContainer className="flex flex-col gap-10 items-center justify-center my-56">
+      <AppContainer className="flex flex-col gap-10 items-center justify-center my-24 md:my-56">
         <h3 className="text-center text-4xl font-medium">
           Built for the future.
           <br />
