@@ -22,7 +22,7 @@ export default async function Header() {
 
         <div className=" hidden md:flex items-center">
           <HeaderNavigation />
-          <div className="mx-1.5 w-px h-4 bg-border-primary"></div>
+          <div className="mx-1.5 w-px h-4 bg-border-primary lg:mx-4"></div>
         </div>
 
         <div className="flex items-center gap-2">
