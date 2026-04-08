@@ -160,16 +160,16 @@ export default function HeaderNavigation() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/customers">Customers</NavigationMenuLink>
+            <NavigationMenuLink href="/">Customers</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/pricing">Pricing</NavigationMenuLink>
+            <NavigationMenuLink href="/">Pricing</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem className="hidden lg:block">
-            <NavigationMenuLink href="/changelog">Changelog</NavigationMenuLink>
+            <NavigationMenuLink href="/">New</NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
+            <NavigationMenuLink href="/">Contact</NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuIndicator />
