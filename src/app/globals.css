@@ -24,6 +24,13 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
 
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-quaternary: var(--bg-quaternary);
+  --color-bg-marketing: var(--bg-marketing);
+  --color-bg-quinary: var(--bg-quinary);
+
   --color-bg-translucent: var(--bg-translucent);
   --color-link-primary: var(--link-primary);
   --color-link-hover: var(--link-hover);
@@ -72,6 +79,13 @@
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
 
+  --bg-primary: #08090a;
+  --bg-secondary: #1c1c1f;
+  --bg-tertiary: #232326;
+  --bg-quaternary: #28282c;
+  --bg-marketing: #010102;
+  --bg-translucent: rgba(255, 255, 255, 0.05);
+  --bg-quinary: #282828;
   --bg-translucent: rgba(255, 255, 255, 0.05);
   --link-primary: #828fff;
   --link-hover: #1a1d2f;

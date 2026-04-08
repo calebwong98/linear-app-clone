@@ -20,7 +20,7 @@ export default async function Header() {
           href="/"
           className="flex items-center gap-2 mr-auto -ml-2 px-2 py-1 rounded-sm"
         >
-          <Logo />
+          <Logo type="header" />
         </Link>
 
         <div className=" hidden md:flex items-center">

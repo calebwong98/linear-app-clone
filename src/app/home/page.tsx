@@ -1,5 +1,9 @@
-import Image from "next/image";
+import SectionPreFooter from "./_section/SectionPreFooter";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <SectionPreFooter />
+    </>
+  );
 }
