@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Linear.app Landing Page Clone
+
+A high-fidelity clone of the [Linear.app](https://linear.app) landing page, built from scratch to demonstrate modern frontend development skills. This pixel-perfect recreation features responsive layouts, smooth animations, and interactive UI elements — all implemented with production-quality code.
+
+## Preview
+
+> **Live Demo:** _Coming soon_
+
+## Tech Stack
+
+| Category          | Technologies                                              |
+| ----------------- | --------------------------------------------------------- |
+| **Framework**     | Next.js 16 (App Router), React 19, TypeScript             |
+| **Styling**       | Tailwind CSS 4, OKLch color system, CSS custom properties |
+| **UI Components** | shadcn/ui (Radix UI primitives), Lucide icons             |
+| **Animations**    | tw-animate-css, custom keyframe animations                |
+| **Fonts**         | Geist Sans, Geist Mono, Inter (via Google Fonts)          |
+
+## Features
+
+- **Pixel-perfect recreation** of Linear's dark-themed landing page with exact color palette, typography, and spacing
+- **Interactive hero section** with a full Linear UI mockup (sidebar navigation, issue tracker, floating AI chat widget)
+- **Responsive design** across all breakpoints — mobile menu drawer, adaptive grids, and fluid typography
+- **Animated brand carousel** with infinite horizontal scroll showcasing partner logos (Coinbase, OpenAI, Cursor, Vercel, etc.)
+- **Multi-level dropdown navigation** with descriptive menu items for Product and Resources sections
+- **Component-driven architecture** using shadcn/ui with custom variants (Button, Sheet, NavigationMenu, Tooltip, ScrollArea)
+- **Lightweight state management** via React Context API for mobile menu state — no external libraries needed
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx                # Root layout with font providers
+│   ├── globals.css               # Theme variables & global styles
+│   └── home/
+│       ├── page.tsx              # Main landing page
+│       ├── layout.tsx            # Page shell (Header, Footer, Menu)
+│       ├── _layout/              # Header, Footer, Navigation, Mobile Menu
+│       └── _section/             # Hero, Brands carousel, Pre-footer CTA
+├── components/
+│   ├── shared/                   # Reusable components (Logo)
+│   └── ui/                       # shadcn/ui primitives
+└── lib/
+    ├── utils.ts                  # Utility functions (cn)
+    └── hooks/useMediaQuery.ts    # Responsive breakpoint hook
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Purpose
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project was built as a frontend engineering exercise to demonstrate:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Proficiency with **Next.js App Router** and **React Server Components**
+- Ability to translate complex designs into **clean, maintainable code**
+- Mastery of **Tailwind CSS** for responsive, utility-first styling
+- Experience with **component libraries** (shadcn/ui, Radix UI) and composable architecture
+- Attention to **detail, polish, and performance**
