@@ -52,7 +52,7 @@ export default function Menu() {
     <Sheet open={isOpen && !isDesktop} onOpenChange={setIsOpen} modal={false}>
       <SheetTrigger></SheetTrigger>
       <SheetContent
-        className="inset-0 h-full w-full data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:border-none"
+        className="bg-bg-primary inset-0 h-full w-full data-[side=right]:w-full data-[side=right]:sm:max-w-none data-[side=right]:border-none"
         showCloseButton={false}
         onInteractOutside={(e) => e.preventDefault()}
         aria-describedby={undefined}
