@@ -4,7 +4,7 @@ A high-fidelity clone of the [Linear.app](https://linear.app) landing page, buil
 
 ## Preview
 
-> **Live Demo:** _Coming soon_
+> **Live Demo:** [https://linear-app-clone-six.vercel.app/](https://linear-app-clone-six.vercel.app/)
 
 ## Tech Stack
 
