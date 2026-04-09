@@ -18,7 +18,10 @@ export default function SectionBrands() {
       <div className="h-[110px] overflow-hidden relative w-full">
         <div className="flex w-[calc(200px*8)] animate-scroll lg:animate-none">
           {brands.map((brand) => (
-            <div className="h-[110px] w-[200px] flex items-center justify-center">
+            <div
+              key={brand}
+              className="h-[110px] w-[200px] flex items-center justify-center"
+            >
               <Link
                 href="/"
                 className="group flex flex-col items-center gap-8 sm:gap-10"
@@ -49,6 +52,9 @@ export default function SectionBrands() {
       <div className="grid grid-cols-3 min-w-[1000px]">
         {/* Card 1 - Built for purpose */}
         <div className="group relative overflow-hidden flex flex-col items-center border-r">
+          <p className="text-text-quaternary/50 mr-auto px-6 text-[13px]">
+            FIG 0.2
+          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="265"
@@ -154,7 +160,7 @@ export default function SectionBrands() {
               </filter>
             </defs>
           </svg>
-          <div className="p-5 sm:p-6">
+          <div className="p-5 sm:p-6 mt-10">
             <h3 className="text-[15px] sm:text-base font-medium text-text-primary">
               Built for purpose
             </h3>
@@ -167,6 +173,9 @@ export default function SectionBrands() {
 
         {/* Card 2 - Powered by AI agents */}
         <div className="group relative overflow-hidden flex flex-col items-center border-r">
+          <p className="text-text-quaternary/50 mr-auto px-6 text-[13px]">
+            FIG 0.3
+          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="265"
@@ -272,7 +281,7 @@ export default function SectionBrands() {
               </filter>
             </defs>
           </svg>
-          <div className="p-5 sm:p-6">
+          <div className="p-5 sm:p-6 mt-10">
             <h3 className="text-[15px] sm:text-base font-medium text-text-primary">
               Powered by AI agents
             </h3>
@@ -284,7 +293,10 @@ export default function SectionBrands() {
         </div>
 
         {/* Card 3 - Designed for speed */}
-        <div className="group relative overflow-hidden flex flex-col items-center border-r">
+        <div className="group relative overflow-hidden flex flex-col items-center">
+          <p className="text-text-quaternary/50 mr-auto px-6 text-[13px]">
+            FIG 0.4
+          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="265"
@@ -390,7 +402,7 @@ export default function SectionBrands() {
               </filter>
             </defs>
           </svg>
-          <div className="p-5 sm:p-6">
+          <div className="p-5 sm:p-6 mt-10">
             <h3 className="text-[15px] sm:text-base font-medium text-text-primary">
               Designed for speed
             </h3>
