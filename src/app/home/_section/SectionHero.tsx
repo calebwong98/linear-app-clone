@@ -1,5 +1,6 @@
 import { Logo } from "@/components/shared/Logo";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   ArrowRight,
   Inbox,
@@ -22,6 +23,8 @@ import {
   EditIcon,
   GitBranch,
   Link2Icon,
+  X,
+  SendHorizonal,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -364,6 +367,83 @@ export default function SectionHero() {
                 </div>
 
                 <p className="text-text-quaternary mt-8">Labels</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Copilot Chatbox */}
+          <div className="absolute bottom-6 right-12 w-[360px] bg-[#1a1a1c] border border-border-primary rounded-lg shadow-2xl text-[13px] overflow-hidden">
+            {/* Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border-primary">
+              <div className="flex items-center gap-2">
+                <div className="size-5 rounded-full bg-white flex items-center justify-center shrink-0 text-[9px] font-bold text-black">
+                  C
+                </div>
+                <span className="text-text-primary font-medium">
+                  GitHub Copilot
+                </span>
+              </div>
+              <X className="size-4 text-text-quaternary cursor-pointer" />
+            </div>
+            {/* Body */}
+            <ScrollArea className="h-[300px] w-full rounded-md border p-4">
+              <div className="px-4 py-3 flex flex-col gap-3 text-text-tertiary leading-relaxed">
+                <p>
+                  I received your request and will let you know when the PR is
+                  ready.
+                </p>
+
+                <p>
+                  Start{" "}
+                  <code className="bg-bg-quaternary px-1.5 py-0.5 rounded text-[11px] text-text-secondary">
+                    github-mcp-server
+                  </code>{" "}
+                  MCP server
+                </p>
+                <p>
+                  Start{" "}
+                  <code className="bg-bg-quaternary px-1.5 py-0.5 rounded text-[11px] text-text-secondary">
+                    playwright
+                  </code>{" "}
+                  MCP server
+                </p>
+
+                <p>
+                  I&apos;ll start by exploring the repository structure to
+                  understand the codebase and then implement the necessary
+                  changes to render UI before{" "}
+                  <code className="bg-bg-quaternary px-1.5 py-0.5 rounded text-[11px] text-text-secondary">
+                    vehicle_state
+                  </code>{" "}
+                  sync
+                </p>
+
+                <p>
+                  <span className="text-text-quaternary">Bash:</span> Check
+                  current directory and list repository contents
+                </p>
+                <p>
+                  <span className="text-text-quaternary">View</span>{" "}
+                  /home/runner/kinetic/kinetic-ios
+                </p>
+
+                <p className="text-text-quaternary">Worked for 2min</p>
+
+                <p className="text-text-primary font-medium">
+                  Copilot has completed the issue!
+                </p>
+                <p>See the pull request at:</p>
+              </div>
+            </ScrollArea>
+
+            {/* Input */}
+            <div className="px-3 pb-3">
+              <div className="flex items-center gap-2 bg-[#141415] border border-border-primary rounded-md px-3 py-2.5">
+                <span className="flex-1 text-text-quaternary text-[13px]">
+                  Message GitHub Copilot...
+                </span>
+                <Paperclip className="size-4 text-text-quaternary" />
+                <SendHorizonal className="size-4 text-text-quaternary" />
               </div>
             </div>
           </div>
