@@ -18,6 +18,10 @@ import {
   CircleDot,
   Zap,
   MessageSquare,
+  SearchIcon,
+  EditIcon,
+  GitBranch,
+  Link2Icon,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,77 +73,112 @@ export default function SectionHero() {
           />
         </div>
 
-        <div className="absolute top-0 left-0 bg-card border border-border-tertiary w-[1346px] rounded-lg overflow-hidden flex text-[11px]">
+        <div className="absolute top-0 left-0 bg-bg-primary border border-border-primary w-[1346px] rounded-lg overflow-hidden flex text-[13px] p-2">
           {/* Left Sidebar */}
-          <div className="w-[200px] shrink-0 bg-card border-r border-border-primary flex flex-col py-2.5">
+          <div className="w-[250px] flex flex-col pr-3.5 pb-3.5 pt-2 pl-2">
             {/* Logo */}
-            <Button className="w-fit bg-card">
-              <Logo className="h-4" />
-
-              <ChevronDown className="size-3 text-text-quaternary" />
-            </Button>
+            <div className="flex justify-between">
+              <Button className="w-fit text-text-primary">
+                <Logo className="h-4" />
+                <ChevronDown className="size-4 text-text-quaternary" />
+              </Button>
+              <div className="flex gap-3 items-center">
+                <SearchIcon className="size-3 text-text-tertiary" />
+                <div className="p-1.25 border border-border-tertiary rounded-sm">
+                  <EditIcon className="size-4 text-text-primary" />
+                </div>
+              </div>
+            </div>
 
             {/* Nav Items */}
-            <div className="flex flex-col gap-0.5 px-1.5">
-              <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                <Inbox className="size-3.5" />
+            <div className="flex flex-col pl-2 py-3 gap-0.5">
+              <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                <Inbox className="size-3.5 text-text-quaternary" />
                 <span>Inbox</span>
               </div>
-              <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                <User className="size-3.5" />
+              <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                <User className="size-3.5 text-text-quaternary" />
                 <span>My issues</span>
               </div>
-              <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                <Eye className="size-3.5" />
+              <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                <Eye className="size-3.5 text-text-quaternary" />
                 <span>Reviews</span>
               </div>
-              <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                <Activity className="size-3.5" />
+              <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                <Activity className="size-3.5 text-text-quaternary" />
                 <span>Pulse</span>
               </div>
             </div>
 
             {/* Workspace */}
-            <div className="mt-4 px-1.5">
-              <p className="text-text-quaternary text-[10px] px-2 mb-1 font-medium">
+            <div className="text-[13px]">
+              <p className="pl-3 py-1 text-text-quaternary font-medium flex">
                 Workspace
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  role="img"
+                  focusable="false"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="rotate-90"
+                >
+                  <path d="M7.00194 10.6239C6.66861 10.8183 6.25 10.5779 6.25 10.192V5.80802C6.25 5.42212 6.66861 5.18169 7.00194 5.37613L10.7596 7.56811C11.0904 7.76105 11.0904 8.23895 10.7596 8.43189L7.00194 10.6239Z"></path>
+                </svg>
               </p>
-              <div className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <Compass className="size-3.5" />
+
+              <div className="flex flex-col pl-2 gap-0.5">
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <Compass className="size-3.5 text-text-quaternary" />
                   <span>Initiatives</span>
                 </div>
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <FolderKanban className="size-3.5" />
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <FolderKanban className="size-3.5 text-text-quaternary" />
                   <span>Projects</span>
                 </div>
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <MoreHorizontal className="size-3.5" />
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <MoreHorizontal className="size-3.5 text-text-quaternary" />
                   <span>More</span>
                 </div>
               </div>
             </div>
 
             {/* Favorites */}
-            <div className="mt-4 px-1.5">
-              <p className="text-text-quaternary text-[10px] px-2 mb-1 font-medium">
+            <div className="text-[13px] mt-4">
+              <p className="pl-3 py-1 text-text-quaternary font-medium flex">
                 Favorites
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  role="img"
+                  focusable="false"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="rotate-90"
+                >
+                  <path d="M7.00194 10.6239C6.66861 10.8183 6.25 10.5779 6.25 10.192V5.80802C6.25 5.42212 6.66861 5.18169 7.00194 5.37613L10.7596 7.56811C11.0904 7.76105 11.0904 8.23895 10.7596 8.43189L7.00194 10.6239Z"></path>
+                </svg>
               </p>
-              <div className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded bg-bg-translucent text-text-primary">
-                  <div className="size-2.5 rounded-full bg-[#4da858]"></div>
+
+              <div className="flex flex-col pl-2 gap-0.5">
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <CircleDot className="size-3.5 text-yellow-300" />
                   <span>Faster app launch</span>
                 </div>
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <Layers className="size-3.5 text-link-primary" />
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <CircleDot className="size-3.5 text-text-quaternary" />
                   <span>Agent tasks</span>
                 </div>
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <span className="text-red-400 text-[10px] font-bold">✕</span>
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <CircleDot className="size-3.5 text-cyan-500" />
                   <span>UI Refresh</span>
                 </div>
-                <div className="flex items-center gap-2.5 px-2 py-[3px] rounded text-text-tertiary hover:bg-bg-translucent">
-                  <CircleDot className="size-3.5 text-purple-400" />
+                <div className="py-1 px-1.5  gap-2.5 flex items-center rounded text-text-secondary hover:bg-bg-translucent cursor-pointer">
+                  <CircleDot className="size-3.5 text-red-400" />
                   <span>Agents Insights</span>
                 </div>
               </div>
@@ -147,188 +186,184 @@ export default function SectionHero() {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 flex flex-col min-w-0">
-            {/* Top Bar */}
-            <div className="flex items-center justify-between px-4 py-2 border-b border-border-primary">
-              <div className="flex items-center gap-2">
-                <span className="text-text-primary font-medium text-[12px]">
-                  Faster app launch
-                </span>
-                <Star className="size-3 text-yellow-500 fill-yellow-500" />
-                <MoreHorizontal className="size-3.5 text-text-quaternary" />
+          <div className="rounded-md border flex-1 flex">
+            <div className="flex-1">
+              {/* Top Bar */}
+              <div className="h-11 pr-6 pl-7.75 flex items-center justify-between border-b border-border-primary">
+                <div className="flex items-center gap-2">
+                  <span className="text-text-primary font-medium text-[12px]">
+                    Faster app launch
+                  </span>
+                  <Star className="size-3 text-yellow-500 fill-yellow-500" />
+                  <MoreHorizontal className="size-3.5 text-text-quaternary" />
+                </div>
+                <div className="flex items-center gap-1.5 text-text-quaternary">
+                  <span className="">
+                    <span className="text-text-tertiary">02 </span>/ 145
+                  </span>
+                  <ChevronUp className="size-4" />
+                  <ChevronDown className="size-4" />
+                </div>
               </div>
-              <div className="flex items-center gap-1.5 text-text-quaternary">
-                <span className="text-[10px]">02 / 145</span>
-                <ChevronUp className="size-3" />
-                <ChevronDown className="size-3" />
-              </div>
-            </div>
 
-            {/* Issue Content */}
-            <div className="flex flex-1 min-h-0">
-              <div className="flex-1 px-6 py-4 overflow-hidden">
-                <h2 className="text-text-primary text-[18px] font-semibold leading-tight mb-2">
+              {/* Issue Content */}
+              <div className="flex-1 min-h-0 p-10 overflow-hidden">
+                <h2 className="px-4 text-text-primary text-[18px] font-semibold leading-tight mb-2">
                   Faster app launch
                 </h2>
-                <p className="text-text-tertiary text-[11px] leading-relaxed mb-4">
+                <p className="px-4 text-text-tertiary leading-relaxed mb-6">
                   Render UI before{" "}
                   <code className="bg-bg-quaternary px-1 py-0.5 rounded text-[10px]">
                     vehicle_state
                   </code>{" "}
-                  sync when minimum required state is present, instead of
-                  blocking on full refresh during iOS startup.
+                  sync when minimum required state is present,
+                  <br /> instead of blocking on full refresh during iOS startup.
                 </p>
-
-                <h3 className="text-text-primary text-[13px] font-semibold mb-2">
+                <h3 className="px-4 text-text-primary text-[13px] font-semibold mb-6">
                   Activity
                 </h3>
                 <div className="flex flex-col gap-2.5">
-                  <div className="flex items-start gap-2">
-                    <div className="size-5 rounded-full bg-bg-tertiary flex items-center justify-center mt-0.5 shrink-0">
-                      <Zap className="size-2.5 text-text-quaternary" />
-                    </div>
-                    <div>
-                      <p className="text-text-tertiary">
-                        <span className="font-medium text-text-secondary">
-                          Linear
-                        </span>{" "}
-                        created the issue via{" "}
-                        <span className="font-medium text-text-secondary">
-                          Slack
-                        </span>{" "}
-                        on behalf of{" "}
-                        <span className="font-medium text-text-secondary">
-                          karri
-                        </span>{" "}
-                        · 2min ago
-                      </p>
-                    </div>
+                  <div className="px-4 flex items-center gap-2">
+                    <Zap className="size-3 text-text-quaternary" />
+
+                    <p className="text-text-tertiary text-xs">
+                      <span className="font-medium">Linear</span> created the
+                      issue via <span className="font-medium">Slack</span> on
+                      behalf of <span className="font-medium">karri</span> ·
+                      2min ago
+                    </p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="size-5 rounded-full bg-bg-tertiary flex items-center justify-center mt-0.5 shrink-0">
-                      <CircleDot className="size-2.5 text-text-quaternary" />
-                    </div>
-                    <div>
-                      <p className="text-text-tertiary">
-                        <span className="font-medium text-text-secondary">
-                          Triage Intelligence
-                        </span>{" "}
-                        added the label{" "}
-                        <span className="bg-bg-quaternary px-1 py-0.5 rounded text-[10px]">
-                          Performance
-                        </span>{" "}
-                        and{" "}
-                        <span className="bg-bg-quaternary px-1 py-0.5 rounded text-[10px]">
-                          iOS
-                        </span>{" "}
-                        · 2min ago
-                      </p>
-                    </div>
+                  <div className="px-4 flex items-center gap-2">
+                    <CircleDot className="size-3 text-text-quaternary" />
+
+                    <p className="text-text-tertiary text-xs">
+                      <span className="font-medium">Triage Intelligence</span>{" "}
+                      added the label{" "}
+                      <span className="font-medium py-0.5 rounded">
+                        Performance
+                      </span>{" "}
+                      and{" "}
+                      <span className="font-medium py-0.5 rounded">iOS</span> ·
+                      2min ago
+                    </p>
                   </div>
 
                   {/* Comment */}
-                  <div className="flex items-start gap-2 mt-1">
-                    <div className="size-5 rounded-full bg-orange-600 flex items-center justify-center mt-0.5 shrink-0 text-[9px] font-bold text-white">
-                      k
+                  <div className="mt-4 bg-card p-4 rounded-sm border border-border-primary">
+                    <div className="pb-4 flex items-start gap-2 mt-1">
+                      <div className="size-5 rounded-full bg-orange-600 flex items-center justify-center mt-0.5 shrink-0 text-[9px] font-bold text-white">
+                        k
+                      </div>
+                      <div>
+                        <p className="text-text-secondary text-[11px]">
+                          <span className="font-medium">karri</span> ·{" "}
+                          <span className="text-text-quaternary">
+                            4 min ago
+                          </span>
+                        </p>
+                        <p className="text-text-tertiary mt-0.5">
+                          Right now we show a spinner forever, which makes it
+                          look like the car disappeared...
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-text-secondary text-[11px]">
-                        <span className="font-medium">karri</span> ·{" "}
-                        <span className="text-text-quaternary">4 min ago</span>
-                      </p>
-                      <p className="text-text-tertiary mt-0.5">
-                        Right now we show a spinner forever, which makes it look
-                        like the car disappeared...
-                      </p>
+                    <div className="border-t pt-4 flex items-start gap-2">
+                      <div className="size-5 rounded-full bg-green-700 flex items-center justify-center mt-0.5 shrink-0 text-[9px] font-bold text-white">
+                        j
+                      </div>
+                      <div>
+                        <p className="text-text-secondary text-[11px]">
+                          <span className="font-medium">jori</span> ·{" "}
+                          <span className="text-text-quaternary">just now</span>
+                        </p>
+                        <p className="text-text-tertiary mt-0.5">
+                          @GitHub Copilot can you take a stab at this?
+                        </p>
+                        <p className="text-text-quaternary text-[10px] mt-0.5 flex items-center gap-1">
+                          ↩ jori connected GitHub Copilot · just now
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-2">
-                    <div className="size-5 rounded-full bg-green-700 flex items-center justify-center mt-0.5 shrink-0 text-[9px] font-bold text-white">
-                      j
+                  <div className="mt-4 bg-card p-4 rounded-sm border border-border-primary">
+                    <div className="flex items-start gap-2">
+                      <div className="size-5 rounded-full bg-white flex items-center justify-center mt-0.5 shrink-0 text-[9px] font-bold text-black">
+                        C
+                      </div>
+                      <div>
+                        <p className="text-text-secondary text-[11px]">
+                          <span className="font-medium">GitHub Copilot</span>
+                        </p>
+                        <p className="text-text-tertiary mt-0.5">
+                          Examining issue{" "}
+                          <span className="text-text-quaternary">ENG-2703</span>
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-text-secondary text-[11px]">
-                        <span className="font-medium">jori</span> ·{" "}
-                        <span className="text-text-quaternary">just now</span>
-                      </p>
-                      <p className="text-text-tertiary mt-0.5">
-                        @GitHub Copilot can you take a stab at this?
-                      </p>
-                      <p className="text-text-quaternary text-[10px] mt-0.5 flex items-center gap-1">
-                        ↩ jori connected GitHub Copilot · just now
-                      </p>
-                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 mt-4 px-4 mb-10">
+                    <CircleDot className="size-3 text-yellow-400" />
+
+                    <p className="text-text-tertiary text-xs">
+                      <span className="font-medium">Github Copilot</span> moved
+                      from{" "}
+                      <span className="font-medium py-0.5 rounded">Todo</span>{" "}
+                      to{" "}
+                      <span className="font-medium py-0.5 rounded">
+                        In Progress
+                      </span>{" "}
+                      · just now
+                    </p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Right Detail Panel */}
-              <div className="w-[200px] shrink-0 border-l border-border-primary px-4 py-4 flex flex-col gap-3">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-text-quaternary text-[10px]">
-                    ENG-2703
-                  </span>
-                  <div className="flex items-center gap-1.5">
-                    <Paperclip className="size-3 text-text-quaternary" />
-                    <Copy className="size-3 text-text-quaternary" />
+            {/* Right Detail Panel */}
+            <div className="w-[330px] shrink-0 border-l border-border-primary flex flex-col gap-3">
+              <div className="h-11 flex items-center justify-between border-b border-border-primary px-4 w-full">
+                <span className="text-text-quaternary">ENG-2703</span>
+                <div className="flex items-center gap-1.5">
+                  <Link2Icon className="size-4 text-text-quaternary" />
+                  <Copy className="size-4 text-text-quaternary" />
+                  <GitBranch className="size-4 text-text-quaternary" />
+                </div>
+              </div>
+
+              <div className="p-4">
+                <div className="flex items-center gap-1.5">
+                  <div className="size-3 rounded-full border-2 border-yellow-500 flex items-center justify-center">
+                    <div className="size-1 rounded-full bg-yellow-500"></div>
                   </div>
+                  <span className="text-text-secondary">In Progress</span>
                 </div>
 
-                <div>
-                  <p className="text-text-quaternary text-[10px] mb-1">
-                    Status
-                  </p>
-                  <div className="flex items-center gap-1.5">
-                    <div className="size-3 rounded-full border-2 border-yellow-500 flex items-center justify-center">
-                      <div className="size-1 rounded-full bg-yellow-500"></div>
-                    </div>
-                    <span className="text-text-secondary text-[11px]">
-                      In Progress
-                    </span>
+                <div className="pt-4 flex items-center gap-2.5">
+                  <div className="flex gap-[1px]">
+                    <div className="w-[2px] h-2 bg-orange-500 rounded-[1px]"></div>
+                    <div className="w-[2px] h-2.5 bg-orange-500 rounded-[1px]"></div>
+                    <div className="w-[2px] h-3 bg-orange-500 rounded-[1px]"></div>
                   </div>
+                  <span className="text-text-secondary">High</span>
                 </div>
-                <div>
-                  <p className="text-text-quaternary text-[10px] mb-1">
-                    Priority
-                  </p>
-                  <div className="flex items-center gap-1.5">
-                    <div className="flex gap-[1px]">
-                      <div className="w-[2px] h-2 bg-orange-500 rounded-[1px]"></div>
-                      <div className="w-[2px] h-2.5 bg-orange-500 rounded-[1px]"></div>
-                      <div className="w-[2px] h-3 bg-orange-500 rounded-[1px]"></div>
-                    </div>
-                    <span className="text-text-secondary text-[11px]">
-                      High
-                    </span>
+
+                <div className="pt-4 flex items-center gap-1.5">
+                  <div className="size-4 rounded-full bg-green-700 flex items-center justify-center font-bold text-white">
+                    j
                   </div>
+                  <span className="text-text-secondary ">jori</span>
                 </div>
-                <div>
-                  <p className="text-text-quaternary text-[10px] mb-1">
-                    Assignee
-                  </p>
-                  <div className="flex items-center gap-1.5">
-                    <div className="size-4 rounded-full bg-green-700 flex items-center justify-center text-[8px] font-bold text-white">
-                      j
-                    </div>
-                    <span className="text-text-secondary text-[11px]">
-                      jori
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1.5 mt-0.5">
+
+                <div className="pt-2 flex items-center gap-1.5 mt-0.5">
                   <div className="size-4 rounded-full bg-bg-tertiary flex items-center justify-center">
                     <MessageSquare className="size-2.5 text-text-quaternary" />
                   </div>
-                  <span className="text-text-secondary text-[11px]">
-                    GitHub Copilot
-                  </span>
+                  <span className="text-text-secondary">GitHub Copilot</span>
                 </div>
-                <div>
-                  <p className="text-text-quaternary text-[10px] mb-1">
-                    Labels
-                  </p>
-                </div>
+
+                <p className="text-text-quaternary mt-8">Labels</p>
               </div>
             </div>
           </div>
